@@ -23,12 +23,12 @@
     ifneq ($(PROCESSOR_ARCHITECTURE),x86) # is Windows x64
       PROCESSOR = x64    
       FCFLAGS = -c -m64 -O0 -Wall -fno-automatic -fno-underscoring -fmessage-length=0
-      CCFLAGS = -O0 -Wall -m64 -c -fmessage-length=0
+      CCFLAGS = -O0 -Wall -m64 -c -fmessage-length=0 -std=c++17
       LFLAGS = -shared -Wall -m64 -lInselTools -L"$(INSEL_HOME)"
     else #is Windows x86    
       PROCESSOR = x86    
       FCFLAGS = -c -O0 -Wall -fno-automatic -fno-underscoring -fmessage-length=0
-      CCFLAGS = -O0 -Wall -c -fmessage-length=0
+      CCFLAGS = -O0 -Wall -c -fmessage-length=0 -std=c++17
       LFLAGS = -shared -Wall -lInselTools -L'$(INSEL_HOME)'
     endif
   else 
