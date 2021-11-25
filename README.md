@@ -3,5 +3,5 @@
 ## Build/Run instruction
 * make
 
-* insel liu.insel
+* insel hydro.insel
 

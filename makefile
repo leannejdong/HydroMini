@@ -46,9 +46,11 @@
     MODULE = libInselUB
     FC = g++
     CC = g++
+    CXX = g++
     L = g++
     FCFLAGS = -c -m64 -fPIC -O0 -Wall -fno-automatic -fno-underscoring -fmessage-length=0 -std=legacy -Wno-intrinsic-shadow
-    CCFLAGS = -m64 -c -O0 -Wall -fmessage-length=0 -fPIC
+    CCFLAGS = -m64 -c -O0 -Wall -Wextra -Wpedantic -Werror -fmessage-length=0 -fPIC -std=c++17
+    CXXFLAGS = -g -std=c++17 -Wall -Wextra -Wpedantic -Werror
     LFLAGS = -lInselTools -ldl -m64 -shared
     RM = rm -f
   else 
@@ -60,9 +62,10 @@
     MODULE = libInselUB
     FC = g++
     CC = g++
+    CXX = g++
     L = g++
     FCFLAGS = -c -fPIC -O0 -Wall -fno-automatic -fno-underscoring -fmessage-length=0
-    CCFLAGS = -c -fPIC -O0 -Wall -fmessage-length=0
+    CCFLAGS = -c -fPIC -O0 -Wall -Wextra -Wpedantic -Werror -fmessage-length=0 -fPIC -std=c++17 
     LFLAGS = -shared libInselTools.so -ldl
     RM = rm -f
 
