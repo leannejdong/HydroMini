@@ -38,7 +38,7 @@ MatrixXd newtonXd(MatrixXd &demands, VectorXd &consumers, MatrixXd &A_eigen_t, c
         mass_flow.setConstant(initial_guess);
         vector<double> external_flow(n);
 /// Assigning node with proper external mass flow rate
-        for(size_t i{0}; i < consumers.size(); ++i){
+        for(int i{0}; i < consumers.size(); ++i){
             for(size_t j{0}; j < n; ++j){
                 if(consumers[i] - 1 == j){
                     external_flow[j] = demands(k,i);
@@ -58,7 +58,7 @@ MatrixXd newtonXd(MatrixXd &demands, VectorXd &consumers, MatrixXd &A_eigen_t, c
         MatrixXd resistance = MatrixXd::Zero(l, m);
       //  std::cout << resistance;
         MatrixXd F22 = MatrixXd::Zero(l, m);
-        int sum = 0; double err = 100;
+        double err = 100;
         VectorXd F2 = VectorXd::Zero(l);
         std::ofstream jacob_mat("data/outputs/jacobian.csv");
         std::ofstream res_mat("data/outputs/resistance.csv");

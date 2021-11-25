@@ -17,7 +17,7 @@ namespace HydraulicNetwork {
             end = std::chrono::high_resolution_clock::now();
             duration = end - start;
 
-            float ms = duration.count() * 1000.0f;
+            //float ms = duration.count() * 1000.0f;
             float s = duration.count();
             //  std::cerr << "Timer took in ms " << ms << "ms" << "\n";
             std::cerr << "Timer took in s " << s << "s"
