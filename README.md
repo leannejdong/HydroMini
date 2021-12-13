@@ -14,6 +14,9 @@ For winsows and Mac OS, please refer to [page3 INSEL Tutorial 1](https://insel.e
 
 Debian-based distro: `sudo apt install ./insel_8.3.0.6b_x86_full.deb`
 
+Arch-based: Instead of `apt` or `apt-get`, Arch users can install via `pacman` or though `AUR`.
+Instructions will be supported later.
+
 ### Build and Run
 
 We build insel block with [GNU Make](https://www.gnu.org/software/make/)
